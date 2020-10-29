@@ -14,23 +14,35 @@
         <div class="container">
             <div class="row block-9 justify-content-center">
                 <div class="col-md-8">
-                    <form action="#" class="p-4 p-md-5 contact-form">
+                    <form action="" method="post" class="p-4 p-md-5 contact-form">
+                        <?php echo "<span class='text-danger'>".$data['request']."</span>";?>
+                        <?php echo "<span class='text-danger'>".$data['wrong']."</span>";?>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input id="email" type="text" class="form-control border border-dark">
+                                    <input id="email"
+                                           name="email"
+                                           type="text"
+                                           class="form-control border border-dark"
+                                           value="<?php if (isset($_POST['email']))echo $_POST['email'];?>">
+                                    <?php echo "<span class='text-danger'>".$data['email']."</span>";?>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input id="password" type="password" class="form-control border border-dark" >
+                                    <input id="password"
+                                           name="password"
+                                           type="password"
+                                           class="form-control border border-dark"
+                                           value="<?php if (isset($_POST['password']))echo $_POST['password'];?>">
+                                    <?php echo "<span class='text-danger'>".$data['password']."</span>";?>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="submit" value="Login" class="btn btn-primary py-3 px-5">
+                                    <input type="submit" value="Login" name="login" class="btn btn-primary py-3 px-5">
                                 </div>
                             </div>
                         </div>
