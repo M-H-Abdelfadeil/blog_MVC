@@ -14,7 +14,7 @@
                 if (isset($_SESSION['user'])){
                     ?>
                     <li class="nav-item"><a href="<?php echo URL_SITE.'/auth/logout'?>" class="nav-link">Logout</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-light"><i class="fa fa-user mr-2"></i><?php echo $_SESSION['user']['name']?></a></li>
+                    <li class="nav-item"><a href="<?php echo URL_SITE.'/profile'?>" class="nav-link text-light"><i class="fa fa-user mr-2"></i><?php echo $_SESSION['user']['name']?></a></li>
                     <?php
                 }else{
                    ?>

@@ -23,7 +23,7 @@
                                     <label for="email">Email</label>
                                     <input id="email"
                                            name="email"
-                                           type="text"
+                                           type="email"
                                            class="form-control border border-dark"
                                            value="<?php if (isset($_POST['email']))echo $_POST['email'];?>">
                                     <?php echo "<span class='text-danger'>".$data['email']."</span>";?>
